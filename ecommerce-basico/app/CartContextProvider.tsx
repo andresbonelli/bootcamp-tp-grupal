@@ -28,7 +28,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [cart]);
 
-  const addToCart = (product: ProductFromCart) => {
+   const addToCart = (product: ProductFromCart) => {
     setCart((prevCart: ProductFromCart[]) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
       if (existingProduct) {
@@ -41,7 +41,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       return [...prevCart, product];
     });
   };
-
+  
   const removeFromCart = (id: number) => {
     setCart((prevCart: ProductFromCart[]) =>
       prevCart.filter((item) => item.id !== id)
@@ -94,3 +94,4 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 };
 
 export const useCart = () => useContext(CartContext);
+export const addToCart = () => useContext(CartContext);

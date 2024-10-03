@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Product } from '../../interfaces';
 import React from 'react';
+import { addToCart } from "@/app/CartContextProvider";
 
 interface CardProps {
   product: Product;
@@ -13,7 +14,7 @@ const Card: React.FC<CardProps> = ({ product }) => {
       <div className="p-4">
         <h2 className="font-bold text-lg text-black">{product.title}</h2>
         <p className="text-black mt-4 font-bold">${product.price}</p>
-        <button className="mt-4 bg-black text-white py-2 px-4 rounded hover:bg-gray-800 transition-colors">
+        <button onClick={() => addToCart()} className="mt-4 bg-black text-white py-2 px-4 rounded hover:bg-gray-800 transition-colors">
           Agregar al Carrito
         </button>
       </div>
