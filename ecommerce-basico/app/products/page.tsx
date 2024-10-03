@@ -1,6 +1,5 @@
 import Card from "../components/card";
 import { Product } from "../interfaces";
-import Card from "../components/card";
 
 export default async function Products() {
   const res = await fetch("https://fakestoreapi.com/products");
