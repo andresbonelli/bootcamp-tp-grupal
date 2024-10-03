@@ -1,3 +1,4 @@
+import Card from "../components/card";
 import { Product } from "../interfaces";
 
 export default async function Products() {
@@ -8,7 +9,12 @@ export default async function Products() {
 
   return (
     <>
-      <h1 className="font-bold text-5xl">PRODUCTS PAGE</h1>
+      <h1 className="font-bold text-5xl my-5">PRODUCTS PAGE</h1>
+      <div className="flex flex-row max-w-2/3 flex-wrap gap-3 px-20">
+        {products.map((product) => {
+          return <Card product={product} />;
+        })}
+      </div>
     </>
   );
 }
