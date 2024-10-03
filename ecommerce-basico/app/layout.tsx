@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/componentes/navbar";
 
 export const metadata: Metadata = {
   title: "Proyecto grupal",
@@ -20,7 +21,8 @@ export default function RootLayout({
   // Pagina de cart????
   return (
     <html lang="en">
-      <body className="w-screen h-screen flex flex-col justify-center items-center ">
+      <body className="w-screen h-screen flex flex-col justify-start items-center ">
+        <Navbar />
         {children}
       </body>
     </html>
