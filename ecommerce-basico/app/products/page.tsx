@@ -1,5 +1,6 @@
 import Card from "../components/card";
 import { Product } from "../interfaces";
+import Card from "../components/card";
 
 export default async function Products() {
   const res = await fetch("https://fakestoreapi.com/products");
@@ -9,11 +10,11 @@ export default async function Products() {
 
   return (
     <>
-      <h1 className="font-bold text-5xl my-5">PRODUCTS PAGE</h1>
-      <div className="flex flex-row max-w-2/3 flex-wrap gap-3 px-20">
-        {products.map((product) => {
-          return <Card product={product} />;
-        })}
+      <h1 className="font-bold text-5xl text-center my-8">PRODUCTS PAGE</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+        {products.map((product) => (
+          <Card key={product.id} product={product} />
+        ))}
       </div>
     </>
   );
