@@ -2,7 +2,7 @@
 
 import { CartProvider } from "./CartContextProvider";
 import "./globals.css";
-import Navbar from "@/componentes/navbar";
+import Navbar from "./components/navbar";
 
 export default function RootLayout({
   children,
@@ -12,9 +12,9 @@ export default function RootLayout({
   // TODO: Navbar fijo
   // Componente listar productos (server )
   // componente card tiene que tener boton add to cart
-  // ruta dinamica product[id] -> (client) render de los detalles
-  // Contexto global: CartProvider -> Products[], addToCart, removeFromCart(?),
-  // totalItems para mostrar en el navbar
+  // DONE ruta dinamica product[id] -> (client) render de los detalles
+  // DONE Contexto global: CartProvider -> Products[], addToCart, removeFromCart(?),
+  // DONE totalItems para mostrar en el navbar
   // Pagina de cart????
   return (
     <html lang="en">

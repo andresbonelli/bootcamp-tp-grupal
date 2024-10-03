@@ -1,5 +1,5 @@
 import { Product } from "@/app/interfaces";
-import ProductDetailsActions from "@/componentes/product_details_actions";
+import ProductDetailsActions from "@/app/components/product_details_actions";
 import Image from "next/image";
 
 export default async function ProductDetails({
