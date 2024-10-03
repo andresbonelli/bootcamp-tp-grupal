@@ -1,11 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
+import { CartProvider } from "./CartContextProvider";
 import "./globals.css";
 import Navbar from "@/componentes/navbar";
-
-export const metadata: Metadata = {
-  title: "Proyecto grupal",
-  description: "Bootcamp 3.0",
-};
 
 export default function RootLayout({
   children,
@@ -22,8 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="w-screen h-screen flex flex-col justify-start items-center ">
-        <Navbar />
-        {children}
+        <CartProvider>
+          <Navbar />
+
+          {children}
+        </CartProvider>
       </body>
     </html>
   );

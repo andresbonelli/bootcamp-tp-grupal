@@ -1,5 +1,4 @@
-import GoToCartIcon from "@/componentes/icons/GoToCart";
-import Image from "next/image";
+
 
 export default function Home() {
   return (

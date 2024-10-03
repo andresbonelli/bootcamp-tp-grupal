@@ -8,6 +8,12 @@ export interface Product {
   rating: Rating;
 }
 
+export interface ProductFromCart {
+  id: number;
+  quantity: number;
+  price: number;
+}
+
 export interface Rating {
   rate: number;
   count: number;
