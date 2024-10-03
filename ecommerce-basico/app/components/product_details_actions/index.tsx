@@ -14,7 +14,7 @@ export default function ProductDetailsActions({
   return (
     <div className="flex flex-col p-5 justify-between items-center w-64">
       <button
-        className="w-full bg-blue-500 hover:bg-blue-800 tx-sm p-2"
+        className=" bg-blue-500 hover:bg-blue-800 tx-sm p-2"
         onClick={() => addToCart({ ...product, quantity: 1 })}
       >
         AGREGAR AL CARRITO
@@ -26,7 +26,8 @@ export default function ProductDetailsActions({
         ELIMINAR DEL CARRITO
       </button>
       <button
-        className="w-full bg-blue-500 hover:bg-blue-800 tx-sm p-2"
+        type="button"
+        className="w-full bg-blue-500 hover:bg-blue-800 tx-sm p-2 border border-red"
         onClick={() => substractOneFromCart(product.id)}
       >
         -
