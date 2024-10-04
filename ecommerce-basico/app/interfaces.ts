@@ -8,10 +8,8 @@ export interface Product {
   rating: Rating;
 }
 
-export interface ProductFromCart {
-  id: number;
+export interface ProductFromCart extends Product {
   quantity: number;
-  price: number;
 }
 
 export interface Rating {
