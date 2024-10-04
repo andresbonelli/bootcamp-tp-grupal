@@ -11,39 +11,27 @@ export default function ProductDetailsActions({
   const { addToCart, removeFromCart, substractOneFromCart, cart, clearCart } =
     useCart();
 
-  return (
-    <div className="flex flex-col p-5 justify-between items-center w-64">
-      <button
-        className=" bg-blue-500 hover:bg-blue-800 tx-sm p-2"
-        onClick={() => addToCart({ ...product, quantity: 1 })}
-      >
-        AGREGAR AL CARRITO
-      </button>
-      <button
-        className="w-full bg-blue-500 hover:bg-blue-800 tx-sm p-2"
-        onClick={() => removeFromCart(product.id)}
-      >
-        ELIMINAR DEL CARRITO
-      </button>
-      <button
-        type="button"
-        className="w-full bg-blue-500 hover:bg-blue-800 tx-sm p-2 border border-red"
-        onClick={() => substractOneFromCart(product.id)}
-      >
-        -
-      </button>
-      <button
-        className="w-full bg-blue-500 hover:bg-blue-800 tx-sm p-2"
-        onClick={() => addToCart({ ...product, quantity: 1 })}
-      >
-        +
-      </button>
-      <button
-        className="w-full bg-blue-500 hover:bg-blue-800 tx-sm p-2"
-        onClick={() => clearCart()}
-      >
-        BORRAR CARRITO
-      </button>
-    </div>
-  );
+    return (
+      <div className="flex flex-col sm:flex-row p-5 gap-5 justify-between items-center w-full sm:w-1/2">
+        <button
+          type="button"
+          className="w-full sm:w-1/3 bg-black text-white rounded p-2 mt-2 border border-black hover:bg-white hover:text-black transition-colors"
+          onClick={() => substractOneFromCart(product.id)}
+        >
+          -
+        </button>
+        <button
+          className="w-full sm:w-1/3 bg-black text-white rounded p-2 mt-2 border border-black hover:bg-white hover:text-black transition-colors"
+          onClick={() => addToCart({ ...product, quantity: 1 })}
+        >
+          +
+        </button>
+        <button
+          className="w-full sm:w-1/3 bg-black text-white rounded p-2 mt-2 border border-black hover:bg-white hover:text-black transition-colors"
+          onClick={() => clearCart()}
+        >
+          BORRAR CARRITO
+        </button>
+      </div>
+    );    
 }
